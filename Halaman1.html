@@ -74,7 +74,7 @@
 
 let index = 0;
 const typingElement = document.getElementById('typing');
-const typingSpeed = 85; // Kecepatan mengetik
+const typingSpeed = 70; // Kecepatan mengetik
 const whatsappButton = document.getElementById('whatsapp-button'); // Tombol WhatsApp
 
 function typeText() {
@@ -92,7 +92,7 @@ function typeText() {
             } else {
                 index++; 
                 if (index < texts.length) {
-                    setTimeout(typeText, 400); 
+                    setTimeout(typeText, 600); 
                 } else {
                     // Tampilkan tombol WhatsApp setelah semua teks selesai diketik
                     whatsappButton.style.display = 'block';
