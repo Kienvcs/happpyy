@@ -77,53 +77,7 @@
     </audio>
 
     <!-- Tombol WhatsApp -->
-    <button id="whatsapp-button" onclick="window.location.href='https://www.facebook.com/ga.beatsteaman.tk'">Reply to message</button>
-
-    <script>
-        const texts = [
-    "Ciee yang hari ini ultah...",
-    "Selamat ulang tahun kamuu",
-    "Semoga di tahun dan bulan ini",
-    "Tuhan mewujudkan doa doa mu yang blum terwujud",
-    "Dan semoga di tahun ini",
-    "Kamu menjadi lebih baik dari sebelumnya",
-    "Untuk kamuu",
-    "Happy birthday 🎉"
-];
-
-let index = 0;
-const typingElement = document.getElementById('typing');
-const typingSpeed = 200; // Kecepatan mengetik
-const whatsappButton = document.getElementById('whatsapp-button'); // Tombol WhatsApp
-
-function typeText() {
-    if (index < texts.length) {
-        const paragraph = document.createElement('p'); 
-        paragraph.textContent = ''; 
-        typingElement.appendChild(paragraph); 
-        let charIndex = 0;
-
-        function typeChar() {
-            if (charIndex < texts[index].length) {
-                paragraph.textContent += texts[index].charAt(charIndex);
-                charIndex++;
-                setTimeout(typeChar, typingSpeed);
-            } else {
-                index++; 
-                if (index < texts.length) {
-                    setTimeout(typeText, 1000); 
-                } else {
-                    // Tampilkan tombol WhatsApp setelah semua teks selesai diketik
-                    whatsappButton.style.display = 'block';
-                }
-            }
-        }
-
-        typeChar();
-    }
-}
-
-typeText(); // Mulai animasi mengetik
+   
     </script>
 
 </body>
